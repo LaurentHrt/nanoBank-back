@@ -1,0 +1,21 @@
+version: '3'
+services: 
+  mongo: 
+    image: mongo:latest
+    volumes: 
+      - mongodb:/data/db
+    ports:
+      - 27028:27017
+    restart: unless-stopped
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mongo
+    ports:
+      - 3001:3001
+    environment:
+      DATABASE_URL: mongodb://mongo/argentBankDB
+volumes:
+  mongodb:
