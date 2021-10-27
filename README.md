@@ -1,10 +1,34 @@
-# Project #10 - Argent Bank API
+# [OC] Project #13 - Argent Bank API
 
-This codebase contains the code needed to run the backend for Argent Bank.
+This codebase contains the code needed to run the backend for ArgentBank.
 
-## Getting Started
+## 1. General information
+
+To start this project, you are free to use Docker or not **(using Docker is recommended)**.
+
+
+## 2. Installation (**with Docker**)
 
 ### Prerequisites
+
+- [Docker + Docker-compose](https://docs.docker.com)
+
+### Instructions
+
+1. Clone the repo onto your computer
+1. Open a terminal window in the cloned project
+1. Run the following commands:
+
+```bash
+# Create containers
+docker-compose up -d
+```
+
+Your server should now be running at http://locahost:3001 and you will now have two users in your MongoDB database!
+
+## 3. Installation (**without Docker**)
+
+### 3.1 Prerequisites
 
 Argent Bank uses the following tech stack:
 
@@ -21,12 +45,11 @@ node --version
 mongo --version
 ```
 
-### Instructions
+### 3.2 Instructions
 
-1. Fork this repo
 1. Clone the repo onto your computer
-1. Open a terminal window in the cloned project
-1. Run the following commands:
+2. Open a terminal window in the cloned project
+3. Run the following commands:
 
 ```bash
 # Install dependencies
@@ -41,32 +64,24 @@ npm run populate-db
 
 Your server should now be running at http://locahost:3001 and you will now have two users in your MongoDB database!
 
-## Populated Database Data
+## 4. Populated Database Data
 
 Once you run the `populate-db` script, you should have two users in your database:
 
-### Tony Stark
+**Tony Stark:**
 
 - First Name: `Tony`
 - Last Name: `Stark`
 - Email: `tony@stark.com`
 - Password: `password123`
 
-### Steve Rogers
+**Steve Rogers:**
 
 - First Name: `Steve`,
 - Last Name: `Rogers`,
 - Email: `steve@rogers.com`,
 - Password: `password456`
 
-## API Documentation
+## 5. API Documentation
 
 To learn more about how the API works, once you have started your local environment, you can visit: http://localhost:3001/api-docs
-
-## Design Assets
-
-Static HTML and CSS has been created for most of the site and is located in: `/designs`.
-
-For some of the dynamic features, like toggling user editing, there is a mock-up for it in `/designs/wireframes/edit-user-name.png`.
-
-And for the API model that you will be proposing for transactitons, the wireframe can be found in `/designs/wireframes/transactions.png`.
