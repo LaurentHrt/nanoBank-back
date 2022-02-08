@@ -1,6 +1,8 @@
-# [OC] Project #13 - Argent Bank API
+# NanoBank
 
-This codebase contains the code needed to run the backend for ArgentBank.
+# Backend
+
+This codebase contains the code needed to run the backend for NanoBank.
 
 ## 1. General information
 
